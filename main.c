@@ -22,10 +22,20 @@ int main(int argc, char** argv) {
 }
 
 int moltiplicazioneIterativa(int a, int b) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int risultato=0;
+    
+    for(;b>0;b--)
+        risultato+=a;
+    
+    return risultato;
 }
 int moltiplicazioneRicorsiva(int a, int b) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int risultato=0;
+    
+    if(b==0)
+        return 0;
+    else{
+        risultato=a+moltiplicazioneRicorsiva(a,b-1);
+        return risultato;
+    }
 }
